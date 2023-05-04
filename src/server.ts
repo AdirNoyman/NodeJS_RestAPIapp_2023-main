@@ -3,6 +3,7 @@ const app = express();
 import router from './router';
 import morgan from 'morgan';
 import { protect } from './modules/auth';
+import { createNewUser, signinUser } from './handlers/user';
 
 // Middleware
 app.use(express.json());
@@ -16,5 +17,7 @@ app.get('/', (req, res) => {
 });
 
 app.use('/api', protect, router);
+app.post('/users', createNewUser);
+app.post('/signin', signinUser);
 
 export default app;

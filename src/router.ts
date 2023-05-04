@@ -1,25 +1,25 @@
 import { Router } from 'express';
 
 const router = Router();
-// *** Product routes *** //
-router.get('/product', (req, res) => {
-  res.json({ data: 'All products' });
+// *** products routes *** //
+router.get('/products', (req, res) => {
+  res.json({ data: 'All productss' });
 });
 
-router.post('/product', (req, res) => {
-  res.send('Create product');
+router.post('/products', (req, res) => {
+  res.send('Create products');
 });
 
-router.get('/product/:id', (req, res) => {
-  res.send('One product');
+router.get('/products/:id', (req, res) => {
+  res.send('One products');
 });
 
-router.put('/product/:id', (req, res) => {
-  res.send('Update product');
+router.put('/products/:id', (req, res) => {
+  res.send('Update products');
 });
 
-router.delete('/product/:id', (req, res) => {
-  res.send('Delete product');
+router.delete('/products/:id', (req, res) => {
+  res.send('Delete products');
 });
 
 // *** Update (object) routes *** //
